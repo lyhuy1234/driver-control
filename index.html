@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+    <title>Login</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: "Jersey 15", serif;
+            background-color: #f4f7fc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Container for the form */
+        .login-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #967c08;
+            margin-bottom: 30px;
+        }
+
+        /* Input fields and button styling */
+        input {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            box-sizing: border-box;
+            font-family: "Jersey 15", serif;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #5fbae9;
+        }
+
+        .btn {
+            background-color: #967c08;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+            transition: background-color 0.3s ease;
+            font-family: "Jersey 15", serif;
+        }
+
+        .btn:hover {
+            background-color: #5a4a04;
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .form-footer a {
+            color: #5fbae9;
+            text-decoration: none;
+        }
+
+        .form-footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive design */
+        @media (max-width: 390px) {
+            .login-container {
+                padding: 20px;
+                max-width: 75%;
+            }
+
+            input {
+                font-size: 14px;
+            }
+
+            .btn {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>CAR CONTROLLER<br>Login</h2>
+        <form action="#" method="POST">
+            <input type="email" name="email" placeholder="Email Address" id="user" required>
+            <input type="password" name="password" placeholder="Password" id="password" required>
+            <button type="submit" class="btn" onclick="func()">Login</button>
+        </form>
+        <div class="form-footer">
+            <p>Don't have an account? <a href="#">Sign up</a></p>
+            <p><a href="#">Forgot password?</a></p>
+        </div>
+    </div>
+
+
+
+<script >
+    function func(){
+        var email = document.getElementById("user").value;
+        var pass = document.getElementById('password').value;
+        if (email == 'Tsmc' && pass == '1234$'){
+            alert("Login successful! Redirecting...");
+            // Redirect to another page after successful login (for example, a dashboard)
+            window.location.href = "dashboard.html"; // Replace with your desired redirect URL
+        } else {
+            errorMessage.textContent = "Invalid email or password. Please try again.";
+        }
+    }
+    var a;
+    function pass(){
+        if(a==1){
+            document.getElementById('password').type='password';
+            document.getElementById('password1').src='img/lock-regular-24.png';
+            a=0;
+        }
+        else{
+            document.getElementById('password').type='text';
+            document.getElementById('password1').src='img/lock-open-regular-24.png';
+            a=1;
+        }
+    }
+    </script>
+</body>
+</html>
